@@ -6,31 +6,35 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://example.com/</loc>
+  <loc>https://shettysindhu63.github.io/myblog/</loc>
+  <lastmod>2017-04-15T15:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://shettysindhu63.github.io/myblog/2017/</loc>
   <lastmod>2017-04-14T15:59:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/2017/</loc>
-  <lastmod>2017-04-14T15:59:00Z</lastmod>
+  <loc>https://shettysindhu63.github.io/myblog/archive.html</loc>
+  <lastmod>2017-04-15T16:58:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/archive.html</loc>
-  <lastmod>2017-04-14T15:59:00Z</lastmod>
- </url>
- <url>
-  <loc>https://example.com/categories/</loc>
+  <loc>https://shettysindhu63.github.io/myblog/categories/</loc>
   <lastmod>2017-04-14T15:34:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/galleries/</loc>
+  <loc>https://shettysindhu63.github.io/myblog/galleries/</loc>
   <lastmod>2017-04-14T15:34:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/listings/</loc>
+  <loc>https://shettysindhu63.github.io/myblog/listings/</loc>
   <lastmod>2017-04-14T15:34:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/posts/first-post/</loc>
+  <loc>https://shettysindhu63.github.io/myblog/pages/about/</loc>
+  <lastmod>2017-04-15T15:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://shettysindhu63.github.io/myblog/posts/first-post/</loc>
   <lastmod>2017-04-14T15:59:00Z</lastmod>
  </url>
 </urlset>
