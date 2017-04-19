@@ -6,15 +6,19 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://shettysindhu63.github.io/myblog/categories/about.xml</loc>
+  <lastmod>2017-04-19T09:29:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/galleries/rss.xml</loc>
-  <lastmod>2017-04-15T16:58:00Z</lastmod>
+  <lastmod>2017-04-19T09:08:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/rss.xml</loc>
-  <lastmod>2017-04-15T16:16:00Z</lastmod>
+  <lastmod>2017-04-19T09:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/sitemap.xml</loc>
-  <lastmod>2017-04-15T16:58:00Z</lastmod>
+  <lastmod>2017-04-19T09:29:00Z</lastmod>
  </sitemap>
 </sitemapindex>
