@@ -2,7 +2,7 @@
 .. title: First Post
 .. slug: first-post
 .. date: 2017-04-19 17:14:09 UTC+08:00
-.. tags: about
+.. tags: about, data science
 .. category: 
 .. link: 
 .. description: 
