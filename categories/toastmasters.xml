@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sindhu's Blog (Posts about data science)</title><link>https://shettysindhu63.github.io/myblog/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://shettysindhu63.github.io/myblog/categories/data-science.xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:shettysindhu63@gmail.com"&gt;Sindhu Shetty&lt;/a&gt; </copyright><lastBuildDate>Wed, 03 May 2017 11:54:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Practice your communication skills with NUS Toastmasters</title><link>https://shettysindhu63.github.io/myblog/posts/practice-your-communication-skills-with-nus-toastmasters/</link><dc:creator>Sindhu Shetty</dc:creator><description>&lt;div&gt;&lt;h4&gt;Communicate to Connect&lt;/h4&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sindhu's Blog (Posts about toastmasters)</title><link>https://shettysindhu63.github.io/myblog/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://shettysindhu63.github.io/myblog/categories/toastmasters.xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:shettysindhu63@gmail.com"&gt;Sindhu Shetty&lt;/a&gt; </copyright><lastBuildDate>Wed, 03 May 2017 11:54:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Practice your communication skills with NUS Toastmasters</title><link>https://shettysindhu63.github.io/myblog/posts/practice-your-communication-skills-with-nus-toastmasters/</link><dc:creator>Sindhu Shetty</dc:creator><description>&lt;div&gt;&lt;h4&gt;Communicate to Connect&lt;/h4&gt;
 &lt;p&gt;Effective Communication is an absolutely essential skill for data scientists. No matter what domain you are in, you need to communicate your work, results and insights with not only other data scientists but also people working closely with you like data engineers or business analysts, your supervisors, your collaborators, stakeholders and sometimes even the general public. So, it's only natural to take steps to improve your communication skills. &lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h4&gt;Importance of a safe platform&lt;/h4&gt;
@@ -30,31 +30,4 @@ For example, in a recent meeting, I discussed about what kind of machine learnin
 &lt;p&gt;&lt;br&gt;
 Personally, it has helped me internalize the evaluating process so I know what to look for and how to provide constructive feedback to the speakers. Perhaps, the greatest benefit is that evaluating more will help you in preparing your own speeches better as you get to know what works and what doesn't. &lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
-If you want to know more about Toastmasters, you can check out &lt;a href="http://www.nustm.org/"&gt;NUS TM&lt;/a&gt; and &lt;a href="https://www.toastmasters.org/"&gt;Toastmasters International&lt;/a&gt; websites.  You could also visit a Toastmasters club in your locality as a guest. For graduate students like myself, I think Toastmasters is a great excuse to get out of the lab and meet new people. And practice your communication skills while you're at it.  &lt;/p&gt;&lt;/div&gt;</description><category>communication</category><category>data science</category><category>toastmasters</category><guid>https://shettysindhu63.github.io/myblog/posts/practice-your-communication-skills-with-nus-toastmasters/</guid><pubDate>Wed, 03 May 2017 07:00:00 GMT</pubDate></item><item><title>First Post</title><link>https://shettysindhu63.github.io/myblog/posts/first-post/</link><dc:creator>Sindhu Shetty</dc:creator><description>&lt;div&gt;&lt;h5&gt;Hello, world !&lt;/h5&gt;
-&lt;p&gt;In my first post, I would just like to highlight &lt;strong&gt;why&lt;/strong&gt; I started this blog, &lt;strong&gt;what&lt;/strong&gt; to expect and &lt;strong&gt;how&lt;/strong&gt; I set up this blog. &lt;/p&gt;
-&lt;h4&gt;The Why&lt;/h4&gt;
-&lt;p&gt;I am writing this blog mostly for myself as a means to keep track of the resources and tools I find useful for my work. Also, I think it's a great excuse to write more and improve my writing. I consider myself a beginner and through this blog, I want to research on how to do things better, polish my skills and reinforce what I am learning. &lt;/p&gt;
-&lt;p&gt;Personally, I have benefited from a lot of blogs (mostly related to data science tools) that helped me when I was stuck. If the content here helps others like myself in untangling some of the information out there, I will be delighted. If I manage to get constructive feedback from advanced users in the field, that would be the best and I will consider myself very lucky.  &lt;/p&gt;
-&lt;hr&gt;
-&lt;h4&gt;The What&lt;/h4&gt;
-&lt;p&gt;With the articles I have in mind right now, the blog will be roughly about the following categories :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Tools/resources that helped me get to the data and analysis quicker and avoid spending too much time on how to get everything to work. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Useful libraries/packages in R and Python mainly for data cleaning, data manipulation and exploratory data analysis.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Occasionally about productivity or organization tools like Evernote and Trello and other stuff I find interesting such as Interactive Data Visualization.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Effective communication skills and my experience with NUS Toastmasters. &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This is a rough sketch and I hope to write about more things in the future. &lt;/p&gt;
-&lt;hr&gt;
-&lt;h4&gt;The How&lt;/h4&gt;
-&lt;p&gt;I started this blog using &lt;a href="https://getnikola.com/"&gt;Nikola&lt;/a&gt; as the static site generator and &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt; for deployment. 
-I am looking for a commenting system and leaning towards &lt;a href="https://staticman.net/"&gt;Staticman&lt;/a&gt;, more updates on that later. &lt;/p&gt;
-&lt;p&gt;I guess that's all for the first post. &lt;strong&gt;Goodbye, World !&lt;/strong&gt; (for now) &lt;/p&gt;&lt;/div&gt;</description><category>about</category><category>data science</category><guid>https://shettysindhu63.github.io/myblog/posts/first-post/</guid><pubDate>Wed, 19 Apr 2017 09:14:09 GMT</pubDate></item></channel></rss>
+If you want to know more about Toastmasters, you can check out &lt;a href="http://www.nustm.org/"&gt;NUS TM&lt;/a&gt; and &lt;a href="https://www.toastmasters.org/"&gt;Toastmasters International&lt;/a&gt; websites.  You could also visit a Toastmasters club in your locality as a guest. For graduate students like myself, I think Toastmasters is a great excuse to get out of the lab and meet new people. And practice your communication skills while you're at it.  &lt;/p&gt;&lt;/div&gt;</description><category>communication</category><category>data science</category><category>toastmasters</category><guid>https://shettysindhu63.github.io/myblog/posts/practice-your-communication-skills-with-nus-toastmasters/</guid><pubDate>Wed, 03 May 2017 07:00:00 GMT</pubDate></item></channel></rss>
