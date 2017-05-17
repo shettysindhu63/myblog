@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sindhu's Blog (Posts about online learning)</title><link>https://shettysindhu63.github.io/myblog/</link><description></description><atom:link href="https://shettysindhu63.github.io/myblog/categories/online-learning.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:shettysindhu63@gmail.com"&gt;Sindhu Shetty&lt;/a&gt; </copyright><lastBuildDate>Wed, 17 May 2017 16:50:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Online Resources for Data Science</title><link>https://shettysindhu63.github.io/myblog/posts/online-resources-for-data-science/</link><dc:creator>Sindhu Shetty</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;Disclaimer : This is in no way a curated list of resources. These are just the ones I have found most helpful in simplifying some of the workflows I follow on a regular basis or providing intuitive explanations of concepts and techniques.&lt;/em&gt;   &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This list may be updated in the future.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+I have separated this post into few categories and included a short &lt;em&gt;what-it-is-and-how-it is-useful&lt;/em&gt; description for each resource.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;Online Courses and Tutorials&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.coursera.org/specializations/jhu-data-science"&gt;Data Science Specialization offered by John Hopkins University , Coursera&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This course got me started with R programming when I knew nothing about it. Also, I keep going back to the &lt;em&gt;Regression Models&lt;/em&gt; and &lt;em&gt;Statistical Inference&lt;/em&gt; sections to refresh the concepts. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.udemy.com/machinelearning/"&gt;Machine Learning A-Z™: Hands-On Python &amp;amp; R In Data Science, Udemy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Comprehensive and easy-to-follow course on machine learning which packs a lot of content. The instructors don't go into the details of the algorithms but the intuitive explanations at the beginning of each section is good enough to get you started. My favorite part of the course is the code templates which I used on a daily basis and saved me a lot of time. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://shettysindhu63.github.io/myblog/posts/online-resources-for-data-science/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>data science</category><category>machine learning</category><category>online learning</category><guid>https://shettysindhu63.github.io/myblog/posts/online-resources-for-data-science/</guid><pubDate>Tue, 16 May 2017 19:38:00 GMT</pubDate></item></channel></rss>

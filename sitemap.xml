@@ -15,11 +15,11 @@
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/archive.html</loc>
-  <lastmod>2017-05-10T14:48:00Z</lastmod>
+  <lastmod>2017-05-17T16:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/categories/</loc>
-  <lastmod>2017-05-03T11:54:00Z</lastmod>
+  <lastmod>2017-05-17T16:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/categories/about/</loc>
@@ -34,8 +34,24 @@
   <lastmod>2017-04-20T18:59:00Z</lastmod>
  </url>
  <url>
+  <loc>https://shettysindhu63.github.io/myblog/categories/machine-learning/</loc>
+  <lastmod>2017-05-17T16:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://shettysindhu63.github.io/myblog/categories/online-learning/</loc>
+  <lastmod>2017-05-17T16:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://shettysindhu63.github.io/myblog/categories/r/</loc>
+  <lastmod>2017-05-15T17:00:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://shettysindhu63.github.io/myblog/categories/toastmasters/</loc>
   <lastmod>2017-05-03T07:26:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://shettysindhu63.github.io/myblog/categories/tutorial/</loc>
+  <lastmod>2017-05-15T17:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/galleries/</loc>
@@ -50,8 +66,16 @@
   <lastmod>2017-04-19T16:42:00Z</lastmod>
  </url>
  <url>
+  <loc>https://shettysindhu63.github.io/myblog/posts/lessons-learned/</loc>
+  <lastmod>2017-05-15T16:56:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://shettysindhu63.github.io/myblog/posts/lifesaver-r-packages-part-1/</loc>
+  <lastmod>2017-05-15T16:56:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://shettysindhu63.github.io/myblog/posts/online-resources-for-data-science/</loc>
-  <lastmod>2017-05-10T14:48:00Z</lastmod>
+  <lastmod>2017-05-13T16:34:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/posts/practice-your-communication-skills-with-nus-toastmasters/</loc>

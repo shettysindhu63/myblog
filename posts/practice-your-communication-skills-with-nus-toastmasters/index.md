@@ -16,6 +16,8 @@ Effective Communication is an absolutely essential skill for data scientists. No
 ### Importance of a safe platform 
 But what if you fear public speaking and this is stopping you from taking the right steps forward ? First of all, this is a completely valid concern as most people are afraid of public speaking at least once in their lives. Recently, I came across this interactive video about neurons on anxiety called [Neurotic Neurons](http://ncase.me/neurons/). Although this video has a few simplifications as noted by the game developer [here](http://blog.ncase.me/neurotic-neurons-simplifications/), it gets the point across. *You need to expose yourself to what you are afraid of, but in a safe manner*. 
 
+<!-- TEASER_END -->
+
 <br>
 ### NUS Toastmasters Club
 This is exactly what **NUS Toastmasters Club** will do for you : provide a **safe platform** to practice public speaking and improve your communication skills. If you are  a beginner, you can be assured of finding a supportive and encouraging audience at every meeting. Even if you are somewhat comfortable with public speaking, you can still benefit from Toastmasters beyond just speaking in front of an audience. I have highlighted most of these in my article [Finding my voice at NUS TM](http://www.nustm.org/index.php/2015/09/14/finding-my-voice-at-nus-tm/) about my experience after one year with the NUS TM Club. 
