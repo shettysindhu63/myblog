@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Exploring Weather API for Singapore | Sindhu's Blog</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://shettysindhu63.github.io/myblog/posts/exploring-weather-api-for-singapore/">
+<!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="Sindhu Shetty">
+<meta property="og:site_name" content="Sindhu's Blog">
+<meta property="og:title" content="Exploring Weather API for Singapore">
+<meta property="og:url" content="https://shettysindhu63.github.io/myblog/posts/exploring-weather-api-for-singapore/">
+<meta property="og:description" content="In Singapore, various environmental and weather data are provided by NEA through the data.gov.sg developers portal. You can sign up and request for an API key by creating a new entry in Apps section.
+">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-07-11T01:17:54+08:00">
+<meta property="article:tag" content="data science">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="tutorial">
+</head>
+<body>
+    <section class="social"><ul>
+<li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+            <li><a href="https://shettysindhu63.github.io/" title="About me"><i class="icon-user"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/shettysindhu63/" title="My LinkedIn"><i class="icon-linkedin"></i></a></li>
+            <li><a href="https://github.com/shettysindhu63/" title="My Github"><i class="icon-github"></i></a></li>
+
+        </ul></section><section class="page-content"><div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">Exploring Weather API for Singapore</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2017-07-11T01:17:54+08:00">2017-07-11 01:17</time>
+            
+                      |  
+        <a href="index.ipynb" id="sourcelink">Source</a>
+
+            </div>
+                    <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="../../categories/data-science/" rel="tag">data science</a></li>
+           <li><a class="tag p-category" href="../../categories/python/" rel="tag">Python</a></li>
+           <li><a class="tag p-category" href="../../categories/tutorial/" rel="tag">tutorial</a></li>
+        </ul>
+</div>
+
+        </div>
+        <div class="body">
+            <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In Singapore, various environmental and weather data are provided by NEA through the data.gov.sg <a href="https://developers.data.gov.sg/">developers portal</a>. You can sign up and request for an API key by creating a new entry in Apps section.</p>
+<p>For the weather forecasts and environmental data, the <em>date</em> parameter retreives all the forecasts issued for the day. The <em>date_time</em> parameter retreives the latest forecast issued as of that time.</p>
+<p>In this notebook, a brief tutorial is provided on how to access the available data. I have also included the reference provided by the website for each API endpoint. <!-- TEASER_END --></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Read the api key</span>
+<span class="n">key</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data-key.txt"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># import library </span>
+<span class="kn">import</span> <span class="nn">requests</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong> 2 hour weather forecast </strong></p>
+<p>The latest 2-hour weather forecast is retreived half-hourly. Use date_time parameter to retreive the latest forecast issued at that moment in time or use the date parameter to retreive all the forecasts issued for that day.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">two_hour_cast</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s1">'https://api.data.gov.sg/v1/environment/2-hour-weather-forecast'</span><span class="p">,</span>
+                 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"date_time"</span><span class="p">:</span> <span class="s2">"2017-04-12T16:00:00"</span><span class="p">},</span>
+                 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"api-key"</span><span class="p">:</span><span class="n">key</span><span class="p">})</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># forecast for area : Clementi </span>
+<span class="n">clementi_location_id</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Forecast for Clementi region, next two hours : '</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">two_hour_cast</span><span class="p">[</span><span class="s1">'items'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'forecasts'</span><span class="p">][</span><span class="mi">11</span><span class="p">][</span><span class="s1">'forecast'</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Forecast for Clementi region, next two hours : 
+Cloudy
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong> 24 hour weather forecast </strong></p>
+<p>The latest 24-hour forecast retreived multiple times throughout the day. Use date_time parameter to retreive the latest forecast issued at that moment in time or use the date parameter to retreive all the forecasts issued for that day. 
+This provides the forecast only for major regions (i.e central, east, west, north, south)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get the latest forecast issued </span>
+<span class="n">daily_forecast</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s1">'https://api.data.gov.sg/v1/environment/24-hour-weather-forecast'</span><span class="p">,</span>
+                 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"date_time"</span><span class="p">:</span> <span class="s2">"2017-04-12T16:00:00"</span><span class="p">},</span>
+                 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"api-key"</span><span class="p">:</span><span class="n">key</span><span class="p">})</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># getting the latest forecast for west region for the valid future time periods</span>
+<span class="n">periods_list</span> <span class="o">=</span> <span class="n">daily_forecast</span><span class="p">[</span><span class="s1">'items'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'periods'</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">periods_list</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Forecast for west region: "</span> <span class="o">+</span> <span class="n">periods_list</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">'regions'</span><span class="p">][</span><span class="s1">'west'</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Time period: "</span><span class="o">+</span> <span class="n">periods_list</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">'time'</span><span class="p">][</span><span class="s1">'start'</span><span class="p">]</span> <span class="o">+</span> <span class="s2">" to "</span> <span class="o">+</span> <span class="n">periods_list</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">'time'</span><span class="p">][</span><span class="s1">'end'</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Forecast for west region: Showers
+Time period: 2017-04-12T12:00:00+08:00 to 2017-04-12T18:00:00+08:00
+
+Forecast for west region: Partly Cloudy (Night)
+Time period: 2017-04-12T18:00:00+08:00 to 2017-04-13T06:00:00+08:00
+
+Forecast for west region: Cloudy
+Time period: 2017-04-13T06:00:00+08:00 to 2017-04-13T12:00:00+08:00
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong> Air temperature </strong></p>
+<p>Get per-minute readings of air temperature across Singapore.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using the date_time parameter </span>
+<span class="c1"># the latest temperature reading as of this time specified in date_time </span>
+<span class="n">air_temperature_now</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s1">'https://api.data.gov.sg/v1/environment/air-temperature'</span><span class="p">,</span>
+                 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"date_time"</span><span class="p">:</span> <span class="s2">"2017-04-12T16:00:00"</span><span class="p">},</span>
+                 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"api-key"</span><span class="p">:</span><span class="n">key</span><span class="p">})</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Finding-the-closest-weather-station-to-your-location">Finding the closest weather station to your location<a class="anchor-link" href="#Finding-the-closest-weather-station-to-your-location">¶</a>
+</h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use Haversine formula for getting distance between two locations </span>
+<span class="c1"># implementation from https://rosettacode.org/wiki/Haversine_formula#Python</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">radians</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">asin</span>
+ 
+<span class="k">def</span> <span class="nf">haversine</span><span class="p">(</span><span class="n">lat1</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon2</span><span class="p">):</span>
+ 
+    <span class="n">R</span> <span class="o">=</span> <span class="mf">6372.8</span> <span class="c1"># Earth radius in kilometers</span>
+    <span class="n">dLat</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">lat2</span> <span class="o">-</span> <span class="n">lat1</span><span class="p">)</span>
+    <span class="n">dLon</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">lon2</span> <span class="o">-</span> <span class="n">lon1</span><span class="p">)</span>
+    <span class="n">lat1</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">lat1</span><span class="p">)</span>
+    <span class="n">lat2</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">lat2</span><span class="p">)</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">dLat</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">lat1</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">lat2</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">dLon</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">asin</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">R</span> <span class="o">*</span> <span class="n">c</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Find the closest station to our current location </span>
+<span class="n">our_location</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.298666</span><span class="p">,</span> <span class="mf">103.772451</span><span class="p">]</span>
+
+<span class="n">station_name</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">station_id</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">distance</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># find the distance between our locations to the station locations </span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">air_temperature_now</span><span class="p">[</span><span class="s1">'metadata'</span><span class="p">][</span><span class="s1">'stations'</span><span class="p">]:</span>
+    <span class="n">station_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span>
+    <span class="n">station_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'id'</span><span class="p">])</span>
+    
+    <span class="n">latitude</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">'location'</span><span class="p">][</span><span class="s1">'latitude'</span><span class="p">]</span>
+    <span class="n">longitude</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">'location'</span><span class="p">][</span><span class="s1">'longitude'</span><span class="p">]</span>
+    
+    <span class="n">distance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">haversine</span><span class="p">(</span><span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">our_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">our_location</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plotting the distances of weather stations from our location</span>
+<span class="kn">import</span> <span class="nn">pylab</span>
+
+<span class="n">pylab</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">air_temperature_now</span><span class="p">[</span><span class="s1">'metadata'</span><span class="p">][</span><span class="s1">'stations'</span><span class="p">]))</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">station_id</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">distance</span> <span class="p">,</span><span class="s2">"go"</span><span class="p">)</span>
+
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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%0AzZnoJanm/j8w3S9S86nOrQAAAABJRU5ErkJggg==">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># finding the nearest station </span>
+<span class="n">min_dist</span> <span class="o">=</span> <span class="n">distance</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">distance</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Station Name : '</span> <span class="o">+</span> <span class="n">station_name</span><span class="p">[</span><span class="n">min_dist</span><span class="p">])</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Station ID : '</span> <span class="o">+</span> <span class="n">station_id</span><span class="p">[</span><span class="n">min_dist</span><span class="p">])</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Station Name : West Coast Highway
+Station ID : S116
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># clementi road location id </span>
+<span class="n">location_id</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># get the station id for the Clementi Road weather station </span>
+<span class="n">station_id</span> <span class="o">=</span> <span class="n">air_temperature_now</span><span class="p">[</span><span class="s1">'metadata'</span><span class="p">][</span><span class="s1">'stations'</span><span class="p">][</span><span class="n">location_id</span><span class="p">][</span><span class="s1">'id'</span><span class="p">]</span>
+
+<span class="c1"># get the air temperature reading for the particular station id</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">air_temperature_now</span><span class="p">[</span><span class="s1">'items'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'timestamp'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">air_temperature_now</span><span class="p">[</span><span class="s1">'items'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'readings'</span><span class="p">][</span><span class="n">location_id</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2017-04-12T15:59:59+08:00
+{'station_id': 'S50', 'value': 30.4}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The data for the whole day can be requested but in my experience, this doesn't work consistently and sometimes throws errors.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using the date parameter, temperature readings for the whole day</span>
+<span class="n">air_temperature</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s1">'https://api.data.gov.sg/v1/environment/air-temperature'</span><span class="p">,</span>
+                 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"date"</span><span class="p">:</span> <span class="s2">"2016-04-12"</span><span class="p">},</span>
+                 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"api-key"</span><span class="p">:</span><span class="n">key</span><span class="p">})</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong> Rainfall </strong></p>
+<p>Get 5-minute readings of rainfall across Singapore. This is similar to air-temperature readings but there are many more stations.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get the latest rainfall using date_time parameter </span>
+<span class="n">rainfall_now</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s1">'https://api.data.gov.sg/v1/environment/rainfall'</span><span class="p">,</span>
+                 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"date_time"</span><span class="p">:</span> <span class="s2">"2017-04-12T16:00:00"</span><span class="p">},</span>
+                 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"api-key"</span><span class="p">:</span><span class="n">key</span><span class="p">})</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get the timestamp</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Timestamp : "</span> <span class="o">+</span> <span class="n">rainfall_now</span><span class="p">[</span><span class="s1">'items'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'timestamp'</span><span class="p">])</span>
+
+<span class="c1"># location and rainfall value </span>
+<span class="n">location_id_rainfall_station</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">rainfall_now</span><span class="p">[</span><span class="s1">'items'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'readings'</span><span class="p">][</span><span class="n">location_id_rainfall_station</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Timestamp : 2017-04-12T15:59:59+08:00
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'station_id': 'S50', 'value': 0}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I hope this helps you get started in case you need this data for your own projects. This post is inspired by <a href="https://github.com/lihaoyi/opendata">Li Haoyi - Open Data</a> which explores the transport data available in Singapore.</p>
+
+</div>
+</div>
+</div>
+    </div>
+  </div>
+
+        </div>
+                <ul class="pager hidden-print">
+<li class="previous">
+                <a href="../lifesaver-r-packages-part-1/" rel="prev" title="Lifesaver R packages - Part 1">Previous post</a>
+            </li>
+        </ul>
+<div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="sindhus-blog",
+            disqus_url="https://shettysindhu63.github.io/myblog/posts/exploring-weather-api-for-singapore/",
+        disqus_title="Exploring Weather API for Singapore",
+        disqus_identifier="cache/posts/exploring-weather-api-for-singapore.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </div>
+                     <footer id="footer"><p>Contents © 2017         <a href="mailto:shettysindhu63@gmail.com">Sindhu Shetty</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>  - Zen theme by <a href="https://github.com/damianavila" rel="nofollow" target="_blank">Damián Avila</a>   </p>
+            
+        </footer>
+</div>
+    </section><script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+    </script><script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>

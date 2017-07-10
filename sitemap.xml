@@ -15,11 +15,11 @@
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/archive.html</loc>
-  <lastmod>2017-05-30T13:38:00Z</lastmod>
+  <lastmod>2017-07-10T17:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/categories/</loc>
-  <lastmod>2017-05-30T13:38:00Z</lastmod>
+  <lastmod>2017-07-10T17:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/categories/about/</loc>
@@ -42,6 +42,10 @@
   <lastmod>2017-05-17T16:50:00Z</lastmod>
  </url>
  <url>
+  <loc>https://shettysindhu63.github.io/myblog/categories/python/</loc>
+  <lastmod>2017-07-10T17:26:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://shettysindhu63.github.io/myblog/categories/r/</loc>
   <lastmod>2017-05-30T13:38:00Z</lastmod>
  </url>
@@ -62,12 +66,16 @@
   <lastmod>2017-04-14T15:34:00Z</lastmod>
  </url>
  <url>
+  <loc>https://shettysindhu63.github.io/myblog/posts/exploring-weather-api-for-singapore/</loc>
+  <lastmod>2017-07-10T17:26:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://shettysindhu63.github.io/myblog/posts/first-post/</loc>
   <lastmod>2017-04-19T16:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/posts/lessons-learned/</loc>
-  <lastmod>2017-05-30T13:38:00Z</lastmod>
+  <lastmod>2017-07-10T17:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/posts/lifesaver-r-packages-part-1/</loc>
