@@ -15,11 +15,11 @@
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/data-science.xml</loc>
-  <lastmod>2017-07-10T17:26:00Z</lastmod>
+  <lastmod>2017-09-17T13:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/machine-learning.xml</loc>
-  <lastmod>2017-05-17T16:50:00Z</lastmod>
+  <lastmod>2017-09-17T13:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/online-learning.xml</loc>
@@ -27,7 +27,7 @@
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/python.xml</loc>
-  <lastmod>2017-07-10T17:26:00Z</lastmod>
+  <lastmod>2017-07-10T17:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/r.xml</loc>
@@ -39,7 +39,11 @@
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/tutorial.xml</loc>
-  <lastmod>2017-07-10T17:26:00Z</lastmod>
+  <lastmod>2017-07-10T17:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://shettysindhu63.github.io/myblog/categories/visualization.xml</loc>
+  <lastmod>2017-09-17T13:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/galleries/rss.xml</loc>
@@ -47,10 +51,10 @@
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/rss.xml</loc>
-  <lastmod>2017-07-10T17:26:00Z</lastmod>
+  <lastmod>2017-09-17T13:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/sitemap.xml</loc>
-  <lastmod>2017-07-10T17:26:00Z</lastmod>
+  <lastmod>2017-09-17T13:31:00Z</lastmod>
  </sitemap>
 </sitemapindex>
