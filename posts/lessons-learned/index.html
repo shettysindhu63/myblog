@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Lessons learned along the data-driven journey | Sindhu's Blog</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://shettysindhu63.github.io/myblog/posts/lessons-learned/">
+<!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="Sindhu Shetty">
+<meta property="og:site_name" content="Sindhu's Blog">
+<meta property="og:title" content="Lessons learned along the data-driven journey">
+<meta property="og:url" content="https://shettysindhu63.github.io/myblog/posts/lessons-learned/">
+<meta property="og:description" content="There are many tutorials and courses on both fundamental concepts and the tools required for data science. However, it is often difficult to find simple, useful and practical guidelines on the workflo">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-09-19T08:00:35+08:00">
+<meta property="article:tag" content="data science">
+<meta property="article:tag" content="machine learning">
+</head>
+<body>
+    <section class="social"><ul>
+<li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+            <li><a href="https://shettysindhu63.github.io/" title="About me"><i class="icon-user"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/shettysindhu63/" title="My LinkedIn"><i class="icon-linkedin"></i></a></li>
+            <li><a href="https://github.com/shettysindhu63/" title="My Github"><i class="icon-github"></i></a></li>
+
+        </ul></section><section class="page-content"><div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">Lessons learned along the data-driven journey</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2017-09-19T08:00:35+08:00">2017-09-19 08:00</time>
+            
+                      |  
+        <a href="index.md" id="sourcelink">Source</a>
+
+            </div>
+                    <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="../../categories/data-science/" rel="tag">data science</a></li>
+           <li><a class="tag p-category" href="../../categories/machine-learning/" rel="tag">machine learning</a></li>
+        </ul>
+</div>
+
+        </div>
+        <div class="body">
+            <div>
+<p>There are many tutorials and courses on both fundamental concepts and the tools required for data science. However, it is often difficult to find simple, useful and practical guidelines on the workflow of the data analysis process and what you will actually be doing on a daily basis and what you can do in order to keep improving. 
+Occasionally, I would find a blog post or video that tries to talk about the process of data analysis and what to do when you hit a roadblock. I also learned a lot from talking to data scientists in local meetups. I have collated some points below from my own experience as well as from listening to others. 
+<!-- TEASER_END --></p>
+<p><br><strong>Clean data delivers results more often than sophisticated algorithms</strong></p>
+<p><br>
+Expect the most benefits from clean data and standard bread and butter approaches [1]. A simple and parsimonious model that explains a lot of data is often better than a complicated algorithm that is difficult to interpret,  when both deliver results not significantly different. Instead of diving into the state-of-the-art algorithm, first make sure there are no data defects and data leakage. Also, check if there is any easy solution and simple preprocessing that could lead to drastically better results. If you are deploying your model or machine learning algorithm, it is crucial that your training, testing and holdout data are representative of the data that will be generated during deployment and the results will hold despite the assumptions you have made of the real world. In this regard, extra caution is required while dealing with time series data where treating all data points as independent and randomly selecting subsets for training and test data may create problems [2]. </p>
+<p><br><strong>Visualization matters, only looking at numbers can be deceiving</strong> </p>
+<p><br>
+Visualization is essential not only at the end of the analysis while communicating your results but at every step of the data analysis. Datasets can generate similar summary statistics, yet be clearly different when plotted [3]. During exploratory analysis, looking at the distribution of the data and drawing lots of plots to analyze the different properties are extremely important. Many statistical methods only hold for normally distributed data. Interactive data analysis during the exploration stage can reveal hidden problems and save you tons of time if you are faced with unexpected results [8]. You may even realize there's a simpler solution then you initially assumed. While communicating your results, take extra care in ensuring that the visualization reflects the data and the results accurately and you don't end up unintentionally misleading or confusing the audience. </p>
+<p><br><strong>Decide on the metrics before diving into the data</strong></p>
+<p><br>
+Deciding your metrics upfront based on your end goals and the problem you are trying to solve will save you a lot of time and effort throughout the data analysis process. You can always look back at these when you hit a roadblock and realign your analysis without feeling overwhelmed. Metrics must be based on the end-goals and the time and effort that will be allotted to the project. Depending on the application, you may not always need a very high accuracy and looking at other metrics beyond accuracy and bias-variance like coverage, precision, recall could be helpful [1]. In some industries, models are retrained and rescored regularly, maybe even on a daily basis and this needs suitable metrics. For example, temporal consistency is used to evaluate the models for predicting home value [9].</p>
+<p><br><strong>Don't reinvent the wheel, use packages</strong></p>
+<p><br>
+Using packages will simplify your workflow, improve readability of your code and enhance your productivity. In addition, you have the guarantee that these packages are optimized and debugged regularly, hence your code is likely to have less bugs and you are more likely to find help if something goes wrong. <a href="https://www.tidyverse.org/packages/">Tidyverse</a> is a good place to start for R users whereas matplotlib, pandas, numpy, scikit-learn are the common packages for Python users. </p>
+<p><br><strong>Define your workflow, update it regularly</strong></p>
+<p><br>
+In the book <a href="https://leanpub.com/artofdatascience">The Art of Data Science</a>, the authors give some useful guidelines on how to go about the data analysis process itself and the importance of matching the data to your expectations at each stage of the analysis. The 5 core activities outlined are: stating and refining the question, exploring the data, building formal models, interpreting the results and communicating the results. Asking the right questions is often the most difficult part of the whole process. Tools like <a href="http://jupyter.org/">Jupyter</a> are helpful in documenting the data analysis process. Even though there may not be a well-defined workflow as each problem is different and much of data analysis is the data exploration stage, having a general guideline is incredibly helpful.   </p>
+<p><br><strong>References and useful links</strong> </p>
+<p><br></p>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=NKiwFF_zBu4">Ian Goodfellow, Practical Methodology for Deploying Machine Learning</a></li>
+<li><a href="http://multithreaded.stitchfix.com/blog/2017/02/28/whats-wrong-with-my-time-series/">Alex Smolyanskaya, What's wrong with my time series</a></li>
+<li><a href="https://www.autodeskresearch.com/publications/samestats">Autodesk Research, Same Stats Different Graphs</a></li>
+<li><a href="http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf">Martin Zinkevich, Best Practices for ML Engineering</a></li>
+<li><a href="https://leanpub.com/artofdatascience">Roger D. Peng and Elizabeth Matsui, The Art of Data Science</a></li>
+<li><a href="https://www.amazon.com/Data-Science-Business-Data-Analytic-Thinking/dp/1449361323">Foster Provost and Tom Fawcett, Data Science for Business</a></li>
+<li><a href="https://www.superdatascience.com/podcast/">Kirill Eremenko, Super Data Science Podcast</a></li>
+<li><a href="https://simplystatistics.org/2017/04/03/interactive-data-analysis/">The Importance of Interactive Data Analysis for Data-Driven Discovery</a></li>
+<li><a href="http://blog.kaggle.com/2017/08/30/train-score-repeat-watch-out-zillows-andrew-martin-on-modeling-pitfalls-in-a-dynamic-world/">Train, Score, Repeat, Watch Out!</a></li>
+<li><a href="http://theorangeduck.com/page/neural-network-not-working">My Neural Network isn't working! What should I do?</a></li>
+<li><a href="https://github.com/williamFalcon/DeepRLHacks">DeepRLHacks, Hacks for training RL systems from John Schulman's lecture</a></li>
+</ol>
+<p><br><strong>Related Meetups in Singapore (not exhaustive)</strong></p>
+<p><br></p>
+<ul>
+<li><a href="https://www.meetup.com/DataScience-SG-Singapore/">DataScienceSG</a></li>
+<li><a href="https://www.meetup.com/IoT_SG/">#IoTSG</a></li>
+<li><a href="https://www.meetup.com/R-User-Group-SG/">R Users Group Singapore (RUGS)</a></li>
+<li><a href="https://www.meetup.com/Singapore-Python-User-Group/">Singapore Python User Group</a></li>
+<li><a href="https://www.meetup.com/PyData-SG/">PyData Singapore</a></li>
+<li><a href="https://www.meetup.com/TensorFlow-and-Deep-Learning-Singapore/">Tensorflow and Deep Learning Singapore</a></li>
+</ul>
+</div>
+        </div>
+                <ul class="pager hidden-print">
+<li class="previous">
+                <a href="../interactive-visualizations-examples-and-resources/" rel="prev" title="Interactive Visualizations : Examples and Resources">Previous post</a>
+            </li>
+        </ul>
+<div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="sindhus-blog",
+            disqus_url="https://shettysindhu63.github.io/myblog/posts/lessons-learned/",
+        disqus_title="Lessons learned along the data-driven journey",
+        disqus_identifier="cache/posts/lessons-learned.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </div>
+                     <footer id="footer"><p>Contents © 2017         <a href="mailto:shettysindhu63@gmail.com">Sindhu Shetty</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>  - Zen theme by <a href="https://github.com/damianavila" rel="nofollow" target="_blank">Damián Avila</a>   </p>
+            
+        </footer>
+</div>
+    </section><script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+    </script><script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>
