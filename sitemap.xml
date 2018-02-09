@@ -7,23 +7,31 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://shettysindhu63.github.io/myblog/</loc>
-  <lastmod>2018-02-09T01:09:00Z</lastmod>
+  <lastmod>2018-02-09T01:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/2017/</loc>
   <lastmod>2018-02-08T23:32:00Z</lastmod>
  </url>
  <url>
+  <loc>https://shettysindhu63.github.io/myblog/2018/</loc>
+  <lastmod>2018-02-09T01:39:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://shettysindhu63.github.io/myblog/archive.html</loc>
-  <lastmod>2018-02-09T01:08:00Z</lastmod>
+  <lastmod>2018-02-09T01:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/categories/</loc>
-  <lastmod>2018-02-09T01:09:00Z</lastmod>
+  <lastmod>2018-02-09T01:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/categories/about/</loc>
   <lastmod>2018-02-08T23:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://shettysindhu63.github.io/myblog/categories/cat_data-science-machine-learning/</loc>
+  <lastmod>2018-02-09T01:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/categories/communication/</loc>
@@ -92,6 +100,10 @@
  <url>
   <loc>https://shettysindhu63.github.io/myblog/posts/more-on-visual-learning-and-interactive-visualizations/</loc>
   <lastmod>2018-02-08T23:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://shettysindhu63.github.io/myblog/posts/my-podcast-playlist/</loc>
+  <lastmod>2018-02-09T01:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://shettysindhu63.github.io/myblog/posts/online-resources-for-data-science/</loc>

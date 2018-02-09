@@ -10,6 +10,10 @@
   <lastmod>2017-05-17T17:02:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://shettysindhu63.github.io/myblog/categories/cat_data-science-machine-learning.xml</loc>
+  <lastmod>2018-02-09T01:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/communication.xml</loc>
   <lastmod>2017-05-15T17:07:00Z</lastmod>
  </sitemap>
@@ -47,10 +51,10 @@
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/rss.xml</loc>
-  <lastmod>2018-02-09T01:08:00Z</lastmod>
+  <lastmod>2018-02-09T01:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/sitemap.xml</loc>
-  <lastmod>2018-02-09T01:09:00Z</lastmod>
+  <lastmod>2018-02-09T01:39:00Z</lastmod>
  </sitemap>
 </sitemapindex>
