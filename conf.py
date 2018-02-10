@@ -138,7 +138,7 @@ NAVIGATION_LINKS = {
         ('/archive.html', 'Archives', 'icon-folder-open-alt'),
         ('/categories/index.html', 'Tags', 'icon-tags'),
         ('/rss.xml', 'RSS', 'icon-rss'),
-        ('https://shettysindhu63.github.io/', 'About me', 'icon-user'),
+        ('https://sindhu.netlify.com/about/', 'About me', 'icon-user'),
         ('https://www.linkedin.com/in/shettysindhu63/', 'My LinkedIn', 'icon-linkedin'),
         ('https://twitter.com/sindhu_63', 'My Twitter', 'icon-twitter'),
         ('https://github.com/shettysindhu63/', 'My Github', 'icon-github'),
