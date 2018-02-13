@@ -14,6 +14,8 @@
 <br>
 This is a writeup on steps I took to setup a [personal website](https://sindhu.netlify.com/) with [blogdown](https://github.com/rstudio/blogdown) + [Hugo](https://gohugo.io/) + [Github](https://github.com/) + [Netlify](https://www.netlify.com/). I use [RStudio](https://www.rstudio.com/) to write the posts and project summaries in R Markdown. Since most of my projects are in R, I thought it would be good idea to setup a site for my project portfolio as well as more polished blog posts on use-cases for R packages and tutorials. Thanks to the [book](https://bookdown.org/yihui/blogdown/) on blogdown by the package author Yihui Xie, the process was quite smooth excluding the part where I took a whole day in selecting the theme (this was due to my indecisiveness). 
 
+<!-- TEASER_END -->
+
 <br>
 #### Blogdown and Hugo 
 
