@@ -54,29 +54,7 @@ article: http://ogp.me/ns/article#
 <p><em>Disclaimer: This is not a tutorial, just notes on what steps I followed. For a comprehensive explanation, read the book <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>.</em></p>
 <p><br>
 This is a writeup on steps I took to setup a <a href="https://sindhu.netlify.com/">personal website</a> with <a href="https://github.com/rstudio/blogdown">blogdown</a> + <a href="https://gohugo.io/">Hugo</a> + <a href="https://github.com/">Github</a> + <a href="https://www.netlify.com/">Netlify</a>. I use <a href="https://www.rstudio.com/">RStudio</a> to write the posts and project summaries in R Markdown. Since most of my projects are in R, I thought it would be good idea to setup a site for my project portfolio as well as more polished blog posts on use-cases for R packages and tutorials. Thanks to the <a href="https://bookdown.org/yihui/blogdown/">book</a> on blogdown by the package author Yihui Xie, the process was quite smooth excluding the part where I took a whole day in selecting the theme (this was due to my indecisiveness). </p>
-<p><br></p>
-<h5>Blogdown and Hugo</h5>
-<ul>
-<li>In R, type <code>install.packages('blogdown')</code> to install blogdown. </li>
-<li>Create a new R project in an <strong>empty directory</strong> </li>
-<li>Select a theme from <a href="https://themes.gohugo.io/">Hugo Themes</a> and note down the GitHub repo. You will find this when you select Download on the theme homepage. Take note that not all themes are tested with blogdown. </li>
-<li>In R, type <code>blogdown::new_site(theme = "theme_name")</code> where theme_name is the theme's GitHub repo <code>username/repo_name</code>. This will automatically create the required <code>config.toml</code> file. For default theme, use <code>blogdown::new_site()</code>
-</li>
-<li>Edit the <code>config.toml</code> file to your needs and change the structure in <code>content</code> directory as required. </li>
-<li>Use RStudio Addin <em>New Post</em> to start writing new post and blogdown's LiveReload will show you preview of the website in RStudio viewer or web browser. If not, you can run <code>blogdown::serve_site()</code> or Addin <em>Serve Site</em>.</li>
-</ul>
-<p><br></p>
-<h5>GitHub and Netlify</h5>
-<ul>
-<li>Initialise git in your R Project folder and add <code>.gitignore</code> file with following: 
-<code>.Rhistory</code>
-<code>.Rproj.user</code>
-<code>.RData</code>
-<code>.Ruserdata</code>
-Create a new remote repository in GitHub and push the local project folder to this remote repo. </li>
-<li>In Netlify, you just need to connect the GitHub repository to your account and Netlify will deploy the site. Set <strong>Build command</strong> to hugo and <strong>Publish directory</strong> to public. Add new variable <strong>HUGO_VERSION</strong> and set it to the latest version of Hugo (which as of now is 0.36). You could just change the website name in the Netlify domain or change to a custom domain name. </li>
-</ul>
-<p>When you need to update the website, you just need to push the changes to the GitHub repo and Netlify will automatically reload the site with the changes. The time-consuming part would be tweaking the theme to your needs, so make sure to note all the changes you make to save time in future.</p>
+<p class="more"><a href="posts/new-site-with-blogdown/">Read more…</a></p>
 </div>
             </div>
         </div>
