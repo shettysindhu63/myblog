@@ -11,7 +11,7 @@
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/communication.xml</loc>
-  <lastmod>2017-05-15T17:07:00Z</lastmod>
+  <lastmod>2018-02-13T07:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/data-science.xml</loc>
@@ -28,6 +28,10 @@
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/python.xml</loc>
   <lastmod>2017-07-10T17:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://shettysindhu63.github.io/myblog/categories/r.xml</loc>
+  <lastmod>2018-02-13T07:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/categories/toastmasters.xml</loc>
@@ -47,10 +51,10 @@
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/rss.xml</loc>
-  <lastmod>2018-02-09T01:44:00Z</lastmod>
+  <lastmod>2018-02-13T07:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://shettysindhu63.github.io/myblog/sitemap.xml</loc>
-  <lastmod>2018-02-10T12:31:00Z</lastmod>
+  <lastmod>2018-02-13T07:25:00Z</lastmod>
  </sitemap>
 </sitemapindex>
