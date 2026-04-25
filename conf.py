@@ -202,6 +202,7 @@ PAGES = (
     ("stories/*.ipynb", "stories", "story.tmpl"),
 )
 
+DEFAULT_POST_FORMAT = "markdown"
 
 # Below this point, everything is optional
 
