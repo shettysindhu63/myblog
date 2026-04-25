@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html prefix="
-og: http://ogp.me/ns#
-article: http://ogp.me/ns/article#
-" lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
@@ -55,8 +52,7 @@ This is a writeup on steps I took ">
 
         </div>
         <div class="body">
-            <div>
-<p><em>Disclaimer: This is not a tutorial, just notes on what steps I followed. For a comprehensive explanation, read the book <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>.</em></p>
+            <p><em>Disclaimer: This is not a tutorial, just notes on what steps I followed. For a comprehensive explanation, read the book <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>.</em></p>
 <p><br>
 This is a writeup on steps I took to setup a <a href="https://sindhu.netlify.com/">personal website</a> with <a href="https://github.com/rstudio/blogdown">blogdown</a> + <a href="https://gohugo.io/">Hugo</a> + <a href="https://github.com/">Github</a> + <a href="https://www.netlify.com/">Netlify</a>. I use <a href="https://www.rstudio.com/">RStudio</a> to write the posts and project summaries in R Markdown. Since most of my projects are in R, I thought it would be good idea to setup a site for my project portfolio as well as more polished blog posts on use-cases for R packages and tutorials. Thanks to the <a href="https://bookdown.org/yihui/blogdown/">book</a> on blogdown by the package author Yihui Xie, the process was quite smooth excluding the part where I took a whole day in selecting the theme (this was due to my indecisiveness). </p>
 <!-- TEASER_END -->
@@ -84,7 +80,6 @@ Create a new remote repository in GitHub and push the local project folder to th
 <li>In Netlify, you just need to connect the GitHub repository to your account and Netlify will deploy the site. Set <strong>Build command</strong> to hugo and <strong>Publish directory</strong> to public. Add new variable <strong>HUGO_VERSION</strong> and set it to the latest version of Hugo (which as of now is 0.36). You could just change the website name in the Netlify domain or change to a custom domain name. </li>
 </ul>
 <p>When you need to update the website, you just need to push the changes to the GitHub repo and Netlify will automatically reload the site with the changes. The time-consuming part would be tweaking the theme to your needs, so make sure to note all the changes you make to save time in future.</p>
-</div>
         </div>
                 <ul class="pager hidden-print">
 <li class="previous">
@@ -114,7 +109,7 @@ Create a new remote repository in GitHub and push the local project folder to th
 
 
     </div>
-                     <footer id="footer"><p>Contents © 2018         <a href="mailto:shettysindhu63@gmail.com">Sindhu Shetty</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>  - Zen theme by <a href="https://github.com/damianavila" rel="nofollow" target="_blank">Damián Avila</a>   </p>
+                     <footer id="footer"><p>Contents © 2026         <a href="mailto:shettysindhu63@gmail.com">Sindhu Shetty</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>  - Zen theme by <a href="https://github.com/damianavila" rel="nofollow" target="_blank">Damián Avila</a>   </p>
             
         </footer>
 </div>
